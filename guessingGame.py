@@ -46,7 +46,7 @@ def start_game():
 
     print("\n You got it, It took you {} tries.\n".format(count))
     WYLTPA = input("Would you like to play again? [y]es/[n]o: ") # WYLTPA == Would You Like To Play Again
-    global HIGHSCORE
+    global HIGHSCORE #global from https://www.w3schools.com/python/python_variables_global.asp
     if HIGHSCORE > count:
       HIGHSCORE = count
     
