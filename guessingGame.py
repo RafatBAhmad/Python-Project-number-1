@@ -13,7 +13,6 @@ print("Hello and welcome to the Number Guessing Game")
 print("---------------------------------------------\n")
 HIGHSCORE = 10
 
-
 def start_game():
     randomNumber = random.randint(1,10)
     while True:
@@ -34,6 +33,7 @@ def start_game():
       else:
         print("plase make sure your guess must be between 1 - 10")    
 
+      
       while True:
         try:
           yourGuess = int (input("Enter your guess number between 1 - 10: "))
@@ -41,10 +41,13 @@ def start_game():
             break
         except  ValueError:
           print("Please enter intger number.")   
-      count += 1
 
+      count += 1        
+      
 
     print("\n You got it, It took you {} tries.\n".format(count))
+    
+
     WYLTPA = input("Would you like to play again? [y]es/[n]o: ") # WYLTPA == Would You Like To Play Again
     global HIGHSCORE #global from https://www.w3schools.com/python/python_variables_global.asp
     if HIGHSCORE > count:
